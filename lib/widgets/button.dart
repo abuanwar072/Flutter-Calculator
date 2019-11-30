@@ -6,11 +6,13 @@ class CalculatorButton extends StatelessWidget {
     this.backgroundColor = Colors.transparent,
     this.textColor = kTextColorBlack,
     @required this.text,
+    @required this.press,
   });
 
   final Color backgroundColor;
   final Color textColor;
   final String text;
+  final Function press;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class CalculatorButton extends StatelessWidget {
         child: FlatButton(
           color: backgroundColor,
           padding: EdgeInsets.all(30),
-          onPressed: () {},
+          onPressed: press,
           child: Text(
             "$text",
             style: TextStyle(
