@@ -47,12 +47,12 @@ class _CalculatorState extends State<Calculator> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  "$displayInputs",
+                  displayInputs == null ? "" : "$displayInputs",
                   style: typeTextStyle,
                 ),
                 Align(
                   child: Text(
-                    "$result",
+                    result == null ? "" : "$result",
                     style: kResultTextStyle,
                   ),
                 ),

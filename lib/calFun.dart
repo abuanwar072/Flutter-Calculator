@@ -18,7 +18,7 @@ calculation(String input) {
     result = null;
     return;
   }
-
+  // if two value are available then the '=' work
   if (num1List.length != 0 && num2List.length != 0 && input == "=") {
     allOperations();
     _parameters = [];
@@ -26,7 +26,8 @@ calculation(String input) {
     num2List = [];
     allInputs = ["$result"];
     return;
-  }
+  } else if (num2List.length == 0 && input == "=")
+    return; // if one value input then press '=' then it did nothing
 
   if (input == "0" ||
       input == "1" ||
